@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Manrope', system-ui, sans-serif;
+  background: #FBF8F1;
+  color: #1C2117;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #B3C9AA;
+  color: #1C2117;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F1E6;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8E4D3;
+  border-radius: 999px;
+  border: 2px solid #F5F1E6;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B3C9AA;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-sage-500 px-5 py-2.5 text-sm font-semibold text-cream-50 shadow-soft transition-all hover:bg-sage-600 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-sage-200 bg-cream-50 px-5 py-2.5 text-sm font-semibold text-ink-900 transition-all hover:bg-sage-50 active:scale-[0.98];
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-ink-700 transition-all hover:bg-cream-100;
+  }
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-clay-500/40 bg-cream-50 px-4 py-2 text-sm font-semibold text-clay-600 transition-all hover:bg-clay-500 hover:text-cream-50;
+  }
+  .input {
+    @apply w-full rounded-2xl border border-cream-200 bg-cream-50 px-4 py-3 text-sm text-ink-900 placeholder:text-ink-500/60 outline-none transition focus:border-sage-300 focus:shadow-ring;
+  }
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-[0.14em] text-ink-500;
+  }
+  .card {
+    @apply rounded-3xl border border-cream-200 bg-cream-50 p-6 shadow-soft;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-sage-200 bg-sage-50 px-3 py-1 text-xs font-medium text-sage-700;
+  }
+  .h-serif {
+    font-family: 'Fraunces', Georgia, serif;
+    font-optical-sizing: auto;
+    letter-spacing: -0.01em;
+  }
+}
+
+.reveal {
+  animation: reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
