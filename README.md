@@ -4,7 +4,7 @@
 
 # 🏋️ CalorixV2
 
-### AI-Powered Fitness, Nutrition & Health Tracking Platform
+### Modern Fitness, Nutrition & Health Tracking Platform
 
 *A modern full-stack fitness management web application built with **Java Spring Boot**, **ReactJS**, **Vite**, **PostgreSQL**, and **JWT Authentication**.*
 
