@@ -13,6 +13,7 @@ const BMI = lazy(() => import('./pages/BMI'));
 const BMR = lazy(() => import('./pages/BMR'));
 const Macros = lazy(() => import('./pages/Macros'));
 const Water = lazy(() => import('./pages/Water'));
+const Walking = lazy(() => import('./pages/Walking'));
 const Calories = lazy(() => import('./pages/Calories'));
 const BodyMeasurements = lazy(() => import('./pages/BodyMeasurements'));
 const Goals = lazy(() => import('./pages/Goals'));
@@ -41,6 +42,7 @@ export default function App() {
         <Route path="/bmr" element={<BMR />} />
         <Route path="/macros" element={<Macros />} />
         <Route path="/water" element={<Water />} />
+        <Route path="/walking" element={<Walking />} />
         <Route path="/calories" element={<Calories />} />
         <Route path="/body-measurements" element={<BodyMeasurements />} />
         <Route path="/goals" element={<Goals />} />

@@ -78,6 +78,16 @@ export const photoApi = {
     api.delete(`/api/photos/${id}`).then((r) => r.data),
 };
 
+/* ============ WALKING SESSIONS ============ */
+export const walkingApi = {
+  save: (userId, payload) =>
+    api.post(`/api/walking-sessions/user/${userId}`, payload).then((r) => r.data),
+  get: (id) => api.get(`/api/walking-sessions/${id}`).then((r) => r.data),
+  list: (userId) => api.get(`/api/walking-sessions/user/${userId}`).then((r) => r.data),
+  latest: (userId) => api.get(`/api/walking-sessions/latest/${userId}`).then((r) => r.data),
+  delete: (id) => api.delete(`/api/walking-sessions/${id}`).then((r) => r.data),
+};
+
 /* ============ GOALS ============ */
 export const goalApi = {
   create: (userId, payload) => api.post(`/api/goals/user/${userId}`, payload).then((r) => r.data),

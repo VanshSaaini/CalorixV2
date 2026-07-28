@@ -13,6 +13,7 @@ import {
   ShieldCheck,
   LogOut,
   Leaf,
+  Footprints,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import clsx from 'clsx';
@@ -25,6 +26,7 @@ const nav = [
   { to: '/calories', label: 'Calories', icon: Flame, testid: 'nav-calories' },
   { to: '/macros', label: 'Macros', icon: Utensils, testid: 'nav-macros' },
   { to: '/water', label: 'Water', icon: Droplets, testid: 'nav-water' },
+  { to: '/walking', label: 'Walking', icon: Footprints, testid: 'nav-walking' },
   { to: '/body-measurements', label: 'Body', icon: Ruler, testid: 'nav-body' },
   { to: '/goals', label: 'Goals', icon: Target, testid: 'nav-goals' },
   { to: '/photos', label: 'Photos', icon: ImgIcon, testid: 'nav-photos' },
